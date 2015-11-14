@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="exampleApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Services and Modules</title>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <link href="bower_components/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <script>
+        angular.module("exampleApp", ["customDirectives", "customServices"])
+
+    </script>
+
+    <script src="js/directives.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/controllers.js"></script>
+</head>
+<body>
+    <div ng-controller="defaultController as dC">
+        <div class="well">
+            <div class="btn-group" tri-button counter="dC.data.totalClicks" source="dC.data.cities">
+                <button class="btn btn-default" ng-repeat="city in dC.data.cities">{{city}}</button>
+            </div>
+            <h5>Total Clicks: {{dC.data.totalClicks}}</h5>
+        </div>
+    </div>
+</body>
+</html>
