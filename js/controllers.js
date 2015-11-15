@@ -17,7 +17,6 @@
         };
 
         $scope.$watch('vm.data.totalClicks', function(newVal){
-            //console.log("Total click count" + newVal);
             logServices.log("Total click count" + newVal)
         });
 
